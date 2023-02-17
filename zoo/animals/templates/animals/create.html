@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Добавление животного</title>
+</head>
+<body>
+    <from method="post">
+        {% csrf_token %}
+        {{ form.name }} <br>
+        {{ form.type }} <br>
+        {{ form.animal_cl }} <br>
+        {{ form.intro }} <br>
+        {{ form.text }} <br>
+        <span> {{ error }} </span>
+        <input type="submit" value="Добавить животное">
+    </from>
+</body>
+</html>

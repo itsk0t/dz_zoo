@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% for el in animals %}
+        <div>
+            <h3>{{ el.name }}</h3>
+            <h3>{{ el.type }}</h3>
+            <p>{{ el.intro }}</p>
+            <a href="{% url 'animal_detail' el.id %}">Подробнее</a>
+        </div>
+    {% endfor %}
+
+    <a href="{% url 'create' %}"><button>Добавить животное</button></a>
+</body>
+</html>
